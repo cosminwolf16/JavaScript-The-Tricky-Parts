@@ -5,11 +5,10 @@ function createGreeter(myName) {
             console.log(myName)
         }, 1000)
 
-        myName = "Smokyn"
+        myName = "Will"
     }
 }
 
 const greetCosmin = createGreeter("Cosmin");
-const greetSmokyn = createGreeter("Smokyn");
 greetCosmin();
-// greetSmokyn();
+
