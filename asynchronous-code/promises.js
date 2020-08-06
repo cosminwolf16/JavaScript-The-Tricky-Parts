@@ -26,19 +26,13 @@ return setTimer(3000)
 })
 
 fetch("https://jsonplaceholder.typicode/todos/1", {})
-.then(function(response) {
-    console.log("First then")
-return response.json();
-}
-, function(err) {
-   console.log("handling error")
-   return "Error Handled"
-}
-).then(function(data) {
+.then((response) => {
+    console.log("First then");
+    return response.json();
+})
+.catch((err) => {
+    console.log("Failed")
+})
+.then(function(data) {
     console.log(data)
-}, function(err) {
-    alert("This failed");
-    console.log(err)
-});
-
-
+})
