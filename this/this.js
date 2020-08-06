@@ -1,13 +1,13 @@
 this.age = 31;
 
 function greet() {
-    console.log("I am " + this.age + " years old.")
+  console.log('I am ' + this.age + ' years old.');
 }
 
 const person = {
-    age: 21,
-    greetMe: greet
-}
+  age: 21,
+  greetMe: greet,
+};
 
 person.greetMe();
 
