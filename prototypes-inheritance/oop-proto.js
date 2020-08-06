@@ -23,3 +23,21 @@ Employee.prototype.sayGoodbye = function () {
 Employee.prototype = {};
 
 emp1.sayGoodbye();
+
+class Human {
+  wave() {
+    console.log('Waving...');
+  }
+}
+
+class Person extends Human {
+  constructor(name) {
+    super();
+    this.name = name;
+  }
+}
+
+const p1 = new Person('Cosmin');
+console.log(p1);
+console.log(p1.wave());
+console.log(p1);
