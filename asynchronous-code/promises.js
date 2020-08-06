@@ -25,11 +25,20 @@ return setTimer(3000)
     console.log(data)
 })
 
-fetch("https://jsonplaceholder.typicode.com/todos/1", {})
+fetch("https://jsonplaceholder.typicode/todos/1", {})
 .then(function(response) {
+    console.log("First then")
 return response.json();
-}).then(function(data) {
+}
+, function(err) {
+   console.log("handling error")
+   return "Error Handled"
+}
+).then(function(data) {
     console.log(data)
+}, function(err) {
+    alert("This failed");
+    console.log(err)
 });
 
 
