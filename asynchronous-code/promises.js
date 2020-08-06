@@ -1,17 +1,27 @@
+function setTimer(duration) {
+    return new Promise(function(resolve,reject) {
+        setTimeout(function() {
+        resolve("It worked")
+        }, duration);
+    });
+}
+
 const myPromise = new Promise(function(resolve,reject) {
     setTimeout(function() {
     resolve("It worked")
     }, 2000);
 });
 
-myPromise.then(function(successString) {
-console.log(successString)
+setTimer(2000).then(function() {
+console.log("First timer completed!")
 return 123
 }).then(function (data) {
+console.log("Second then")
 console.log(data)
+return setTimer(3000)
 
 }).then(function(data) {
-    console.log("THird block");
+    console.log("Second timer completed");
     console.log(data)
 })
 
