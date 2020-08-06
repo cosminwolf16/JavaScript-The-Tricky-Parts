@@ -6,6 +6,13 @@ const myPromise = new Promise(function(resolve,reject) {
 
 myPromise.then(function(successString) {
 console.log(successString)
+return 123
+}).then(function (data) {
+console.log(data)
+
+}).then(function(data) {
+    console.log("THird block");
+    console.log(data)
 })
 
 fetch("https://jsonplaceholder.typicode.com/todos/1", {})
